@@ -60,6 +60,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, forign_key: true|
+|product_id|integer|null: false, forign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :product
