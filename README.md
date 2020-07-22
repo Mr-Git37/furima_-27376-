@@ -60,14 +60,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, forign_key: true|
-|product_id|integer|null: false, forign_key: true|
-|comments_id|integer|null: false, forign_key: true|
-|address_id|integer|null: false, forign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :product
 - belongs_to :comments
-- belongs_to :address
 
  ## addressテーブル
 |Column|Type|Options|
