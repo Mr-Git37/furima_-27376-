@@ -51,6 +51,7 @@ Things you may want to cover:
 |shipping|string|null: false|
 |day|integer|null: false|
 |price|integer|null: false|
+|user_id|integer|null: false, forign_key: true|
 ### Association
 - has_many :comments
 - belongs_to :user
@@ -59,17 +60,38 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, forign_key: true|
+|product_id|integer|null: false, forign_key: true|
+|comments_id|integer|null: false, forign_key: true|
+|address_id|integer|null: false, forign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :product
 - belongs_to :comments
+- belongs_to :address
+
+ ## addressテーブル
+|Column|Type|Options|
+|------|----|-------|
+|postal code|integer|null: false|
+|prefectures|string|null: false|
+|city|string|null: false|
+|number|integer|null: false|
+|building name|string|null: ture|
+|phone number|integer|null: false|
+|user_id|integer|null: false, forign_key: true|
+|buy_id|integer|null: false, forign_key: true|
+|product_id|integer|null: false, forign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :buy
+- belongs_to :product
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, forign_key: true|
-|exhibition_id|integer|null: false, forign_key: true|
+|product_id|integer|null: false, forign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :product
